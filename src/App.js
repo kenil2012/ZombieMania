@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
+import React,{Component} from 'react';
+import {CardList} from "./Components/card-list/card-list.component";
+import {Search} from "./Components/search/search.component";
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component{
+  constructor(){
+    super();
+    this.state = {
+      zombies:[],
+      searchField:""
+    }
+  }
+
+  componentDidMount(){
+    fetch("http://jsonplaceholder.typicode.com/users")
+    .then(response => response.json())
+    .then(users => this.setState({zombies:users}))
+  }
+
+  changEvent = (e) => this.setState({searchField: e.target.value})
+
+  render(){
+    const {zombies,searchField} = this.state;
+    const filteredzombies = zombies.filter(zombie => 
+      zombie.name.toLowerCase().includes(searchField.toLowerCase())
+      )
+
+    return(
+      <div className="App">
+          <h1 id="title">ZombieMania</h1>
+          <Search changEvent={this.changEvent} placeholder="Search Zombies"/>
+          <CardList zombies={filteredzombies}/>
+      </div>
+    )
+  }
 }
 
 export default App;
