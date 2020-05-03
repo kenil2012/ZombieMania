@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/ZombieMania/static/css/main.6277a895.chunk.css",
+    "main.js": "/ZombieMania/static/js/main.30f84861.chunk.js",
+    "main.js.map": "/ZombieMania/static/js/main.30f84861.chunk.js.map",
+    "runtime-main.js": "/ZombieMania/static/js/runtime-main.1388f82c.js",
+    "runtime-main.js.map": "/ZombieMania/static/js/runtime-main.1388f82c.js.map",
+    "static/js/2.2111b635.chunk.js": "/ZombieMania/static/js/2.2111b635.chunk.js",
+    "static/js/2.2111b635.chunk.js.map": "/ZombieMania/static/js/2.2111b635.chunk.js.map",
+    "index.html": "/ZombieMania/index.html",
+    "precache-manifest.703bdbe67ef0ac34b4f9ac3e241521c1.js": "/ZombieMania/precache-manifest.703bdbe67ef0ac34b4f9ac3e241521c1.js",
+    "service-worker.js": "/ZombieMania/service-worker.js",
+    "static/css/main.6277a895.chunk.css.map": "/ZombieMania/static/css/main.6277a895.chunk.css.map",
+    "static/js/2.2111b635.chunk.js.LICENSE.txt": "/ZombieMania/static/js/2.2111b635.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1388f82c.js",
+    "static/js/2.2111b635.chunk.js",
+    "static/css/main.6277a895.chunk.css",
+    "static/js/main.30f84861.chunk.js"
+  ]
+}
